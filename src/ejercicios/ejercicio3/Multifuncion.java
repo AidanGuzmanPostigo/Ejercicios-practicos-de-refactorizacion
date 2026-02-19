@@ -1,5 +1,5 @@
 package ejercicios.ejercicio3;
-public class Multifuncion implements MaquinaOficina {
+public class Multifuncion implements MaquinaOficinaAvanzada {
 
     @Override
     public void imprimir(String texto) {

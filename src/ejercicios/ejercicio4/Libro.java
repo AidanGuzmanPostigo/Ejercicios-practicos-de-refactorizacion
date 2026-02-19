@@ -4,13 +4,13 @@ public class Libro {
     private String isbn;
     private String titulo;
     private String autor;
-    private String estado; // "DISPONIBLE" o "PRESTADO" (detalle mejorable)
+    private EstadoLibro estado;
 
     public Libro(String isbn, String titulo, String autor) {
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;
-        this.estado = "DISPONIBLE";
+        this.estado = EstadoLibro.DISPONIBLE;
     }
 
     public String getIsbn() {
@@ -25,11 +25,11 @@ public class Libro {
         return autor;
     }
 
-    public String getEstado() {
+    public EstadoLibro getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(EstadoLibro estado) {
         this.estado = estado;
     }
 }
