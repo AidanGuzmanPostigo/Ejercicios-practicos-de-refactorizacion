@@ -10,27 +10,13 @@ public class Empleado {
         this.nombre = nombre;
         this.puesto = puesto;
     }
-
-    public static Empleado guardar(int id, String nombre, String puesto) {
-        System.out.println("Conectando a la base de datos...");
-        System.out.println("Empleado " + nombre + " guardado");
-        return new Empleado (id,nombre,puesto);
+    public String getNombre() {
+    	return nombre;
     }
-
-    public void eliminar() {
-        System.out.println("Conectando a la base de datos...");
-        System.out.println("Empleado " + nombre + " eliminado");
-        id = -1;
-        nombre = "Sin asignar";
-        puesto = "Sin asignar";
+    public int getId() {
+    	return id;
     }
-
-    public void generarInforme() {
-        if (id == -1) {
-        	System.out.println("No existe el empleado o se ha borrado con anterioridad");
-        } else {
-        	System.out.println("Generando informe para " + nombre);
-            System.out.println("Empleado " + nombre + " Id: " + id + " Puesto: " + puesto);
-        }
+    public String getPuesto() {
+    	return puesto;
     }
 }
